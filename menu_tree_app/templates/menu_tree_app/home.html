@@ -1,0 +1,38 @@
+{% extends 'menu_tree_app/base.html' %}
+{% load menu_tags %}
+
+{% block head %}
+    <title>Home Page</title>
+    <style>
+        .menu-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="menu-container">
+        {% draw_menu 'main_menu' %}
+    </div>
+
+    <div>
+        <h1>Welcome to the Home Page</h1>
+        <p>This is an example of a page using the tree-structured menu.</p>
+    </div>
+{% endblock %}
